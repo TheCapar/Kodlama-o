@@ -1,0 +1,62 @@
+using System;
+
+namespace ödev2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ayakkabi ayakkabi1 = new ayakkabi();
+            ayakkabi1.ayakkabiMarkası = "Nike";
+            ayakkabi1.ayakkabiModeli = "AirJordan";
+            ayakkabi1.ayakkabiNumarasi = 44;
+            ayakkabi1.ayakkabiFiyati = 799.99;
+
+            ayakkabi ayakkabi2 = new ayakkabi();
+            ayakkabi2.ayakkabiMarkası = "Nike";
+            ayakkabi2.ayakkabiModeli = "Kyrie-3";
+            ayakkabi2.ayakkabiNumarasi = 44;
+            ayakkabi2.ayakkabiFiyati = 899.99;
+
+            ayakkabi ayakkabi3 = new ayakkabi();
+            ayakkabi3.ayakkabiMarkası = "Nike";
+            ayakkabi3.ayakkabiModeli = "Kd-7";
+            ayakkabi3.ayakkabiNumarasi = 45;
+            ayakkabi3.ayakkabiFiyati = 599.99;
+
+            ayakkabi[] ayakkabilar = new ayakkabi[] { ayakkabi1, ayakkabi2, ayakkabi3 };
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Ayakkabı Markası" + ":" + ayakkabilar[i].ayakkabiMarkası);
+                Console.WriteLine("Ayakkabının Modeli" + ":" + ayakkabilar[i].ayakkabiModeli);
+                Console.WriteLine("Ayakkabının Numarası" + ":" + ayakkabilar[i].ayakkabiNumarasi);
+                Console.WriteLine("Ayakkabının Fiyatı" + ":" + ayakkabilar[i].ayakkabiFiyati);
+            }
+
+            foreach (var ayakkabi in ayakkabilar)
+            {
+                Console.WriteLine("Ayakkabı Markası" + ":" + ayakkabi.ayakkabiMarkası);
+                Console.WriteLine("Ayakkabının Modeli" + ":" + ayakkabi.ayakkabiModeli);
+                Console.WriteLine("Ayakkabının Numarası" + ":" + ayakkabi.ayakkabiNumarasi);
+                Console.WriteLine("Ayakkabının Fiyatı" + ":" + ayakkabi.ayakkabiFiyati);
+            }
+            int a = 0;
+            while (a < 3)
+            {
+                Console.WriteLine("Ayakkabı Markası" + ":" + ayakkabilar[a].ayakkabiMarkası);
+                Console.WriteLine("Ayakkabının Modeli" + ":" + ayakkabilar[a].ayakkabiModeli);
+                Console.WriteLine("Ayakkabının Numarası" + ":" + ayakkabilar[a].ayakkabiNumarasi);
+                Console.WriteLine("Ayakkabının Fiyatı" + ":" + ayakkabilar[a].ayakkabiFiyati);
+                a++;
+            }
+            }
+            class ayakkabi {
+            public string ayakkabiMarkası{get; set;}
+            public string ayakkabiModeli { get; set; }
+            public double ayakkabiFiyati { get; set;}
+            public int ayakkabiNumarasi { get; set; }
+
+
+        }
+    }
+}
